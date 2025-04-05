@@ -5,9 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const images = [
-  { src: "/images/program1.jpg", link: "https://omikuji-sigma.vercel.app/" },
+  { src: "/images/program1.jpg", link: "https://translation-vert.vercel.app/" },
   { src: "/images/program2.jpg", link: "https://sanmoku.vercel.app/" },
   { src: "/images/program3.jpg", link: "https://react-todo-taupe.vercel.app/" },
+  { src: "/images/program4.jpg", link: "https://omikuji-sigma.vercel.app/" },
 ];
 
 export default function Program() {
