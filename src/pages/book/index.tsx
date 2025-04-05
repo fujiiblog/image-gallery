@@ -70,11 +70,17 @@ export default function Book() {
     <>
       <Navbar />
       <div className="max-w-[1300px] mx-auto p-4">
+        <p
+          className=" 
+      font-bold mb-6 text-left text-black"
+        >
+          読書した書籍集
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
           {books.map((book, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center" // 中央揃え
+              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center transition-transform transform hover:scale-105 duration-300" // 中央揃え
             >
               <Image
                 src={book.src}

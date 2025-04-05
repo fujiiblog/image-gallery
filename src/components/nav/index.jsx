@@ -15,8 +15,8 @@ export default function Navbar() {
         {/* メニュー（Blog と Art を横並びに配置） */}
         <ul className="flex space-x-6 mt-2">
           <li>
-            <Link href="/blog" className="text-gray-400 hover:text-black">
-              Blog
+            <Link href="/book" className="text-gray-400 hover:text-black">
+              Book
             </Link>
           </li>
           <li>
@@ -27,6 +27,11 @@ export default function Navbar() {
           <li>
             <Link href="/program" className="text-gray-400 hover:text-black">
               Program
+            </Link>
+          </li>
+          <li>
+            <Link href="/movie" className="text-gray-400 hover:text-black">
+              Movie
             </Link>
           </li>
         </ul>

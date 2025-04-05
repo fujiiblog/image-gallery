@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const images = [
-  "/images/img1.jpg",
-  "/images/img2.jpg",
-  "/images/img3.jpg",
-  "/images/img4.jpg",
+  "/images/art1.jpg",
+  "/images/art2.jpg",
+  "/images/art3.jpg",
+  "/images/art4.jpg",
 ];
 
 export default function Art() {
@@ -26,11 +26,17 @@ export default function Art() {
     <>
       <Navbar />
       <div className="max-w-[1300px] mx-auto p-4">
+        <p
+          className=" 
+      font-bold mb-6 text-left text-black"
+        >
+          作成したアート作品集
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
           {images.map((src, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center"
+              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center transition-transform transform hover:scale-105 duration-300"
             >
               <Image
                 src={src}
