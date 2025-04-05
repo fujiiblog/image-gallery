@@ -18,8 +18,7 @@ const books: Book[] = [
     src: "/images/book1.jpg",
     alt: "Book 1",
     title: "世界一流エンジニアの思考法",
-    description:
-      "この本は世界一流のエンジニアの思考法を身につける為の書籍である。",
+    description: "この本は世界一流のエンジニアの思考法が学べる書籍です。",
   },
   {
     src: "/images/book2.jpg",
@@ -38,34 +37,31 @@ const books: Book[] = [
     src: "/images/book4.jpg",
     alt: "Book 4",
     title: "リーダブルコードC#",
-    description:
-      "この本は設計の仕方や良いコードと悪いコードは何かを学べる書籍です。",
+    description: "C#の綺麗な書き方を学べる書籍です。",
   },
   {
     src: "/images/book5.jpg",
     alt: "Book 5",
     title: "これからはじめるReact実践入門：コンポーネントの基本から",
-    description:
-      "この本は設計の仕方や良いコードと悪いコードは何かを学べる書籍です。",
+    description: "Reactの基礎を学習できる書籍です。",
   },
   {
     src: "/images/book6.jpg",
     alt: "Book 6",
-    title: "これからはじめるReact実践入門：コンポーネントの基本から",
-    description:
-      "この本は設計の仕方や良いコードと悪いコードは何かを学べる書籍です。",
+    title: "企画脳",
+    description: "企画について学べる書籍です。",
   },
   {
     src: "/images/book7.jpg",
     alt: "Book 7",
-    title: "これからはじめるReact実践入門：コンポーネントの基本から",
-    description:
-      "この本は設計の仕方や良いコードと悪いコードは何かを学べる書籍です。",
+    title: "夢をかなえるゾウ",
+    description: "夢のかなえ方を学べる書籍です。",
   },
 ];
 
 export default function Book() {
-  const [selectedComment, setSelectedComment] = useState<string | null>(null); // クリックした本の感想を表示
+  const [selectedComment, setSelectedComment] = useState<string | null>(null);
+
   const handleImageClick = (comment: string) => {
     setSelectedComment(comment);
   };
@@ -78,19 +74,18 @@ export default function Book() {
           {books.map((book, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-md cursor-pointer"
+              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center" // 中央揃え
             >
               <Image
                 src={book.src}
                 alt={book.alt}
-                width={300}
-                height={300}
-                unoptimized={true} // 最適化を無効にする
-                className="w-full h-auto object-cover"
+                width={350} // サイズを少し大きめに変更
+                height={350} // サイズを少し大きめに変更
+                unoptimized={true}
+                className="object-cover" // オブジェクトをカバー
                 onClick={() => handleImageClick(book.description)}
-                priority={index === 0} // 最初の画像に優先度を追加
+                priority={index === 0}
               />
-              <div className="text-center mt-2 text-black">{book.title}</div>
             </div>
           ))}
         </div>

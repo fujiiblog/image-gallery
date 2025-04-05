@@ -13,15 +13,18 @@ export default function Program() {
       <div className="max-w-[1300px] mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
           {images.map((src, index) => (
-            <div key={index} className="rounded-lg overflow-hidden shadow-md">
+            <div
+              key={index}
+              className="rounded-lg overflow-hidden shadow-md cursor-pointer flex justify-center"
+            >
               <Link href="https://omikuji-sigma.vercel.app/">
                 {" "}
                 {/* 画像をクリックしたら遷移するURLを指定 */}
                 <Image
                   src={src}
                   alt={`Image ${index}`}
-                  width={300}
-                  height={300}
+                  width={350}
+                  height={350}
                   unoptimized={true} // 最適化を無効にする
                   className="w-full h-auto object-cover cursor-pointer"
                   priority={index === 0} // 最初の画像に優先度を追加
